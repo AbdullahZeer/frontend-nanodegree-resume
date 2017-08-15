@@ -4,38 +4,51 @@ This is empty on purpose! Your code to build the resume will go here.
 var bio = {
   name : "Abdullah"
   ,role : "Web developer"
-      ,contacts {
-        ,mobile: "05xxxxxxxx"
+  ,contacts :{
+        mobile: "05xxxxxxxx"
         ,email: "abdullahzeer27@gmail.com"
         ,github: "https://github.com/AbdullahZeer"
-        ,twitter: ""
-        ,location: "riyadh Al-yasmin"
+        ,twitter: "@abdullahzeer27"
+        ,location: "Riyadh"
       }
 
     ,welcomeMessage: "Hello World!!!"
     ,skills: ['java' , 'sql' , 'html' , 'CSS', 'JavaScript' ,'C']
-    ,biopic: "http://via.placeholder.com/150x150"
+    ,biopic: "images/bio-img.jpg"
     ,display: function(){
-      HTMLheaderName.replace("%data%" ,"bio.name");
-      HTMLheaderRole.replace("%data%" ,"bio.role");
-      $("#main").append(HTMLheaderName);
-      $("#main").append(HTMLheaderRole);
+      var name = HTMLheaderName.replace("%data%" ,bio.name);
+      var role = HTMLheaderRole.replace("%data%" ,bio.role);
+      $("#header").append(name);
+      $("#header").append(role);
 
-      function thereIsTwitter(string) {
+      var mobile = HTMLmobile.replace('%data%',bio.contacts.mobile);
+      var email =  HTMLemail.replace('%data%' , bio.contacts.email);
+      var github = HTMLgithub.replace('%data%' , bio.contacts.github);
+      var twitter = thereIsTwitter(bio.contacts.twitter);
+      var location = HTMLlocation.replace('%data%' , bio.contacts.location);
+      $("#topContacts").append(mobile,email,github,twitter,location);
 
-        if(string === "")
-        return "";
-        else {
-          return "\t twitter: " + string;
-        }
-      }
-      var myContacts = "mobile: " + bio.contacts.mobile "\t email: " + bio.contacts.email +
-      "\t github: " + bio.contacts.github + "\t "  + thereIsTwitter(bio.contacts.twitter) + "\t location: " + bio.contacts.location ;
-
-      HTMLcontactGeneric.replace("%contact%" , myContacts);
-
+      var biopic = HTMLbioPic.replace('%data%',bio.biopic);
+      $("#header").append(biopic);
       }
 }
+
+function thereIsTwitter(string) {
+
+  if(string === "")
+  return ""
+  else {
+    return HTMLtwitter.replace('%data%' , bio.contacts.twitter);
+  }
+
+  }
+
+console.log(bio.contacts.mobile);
+console.log(bio.contacts.email);
+console.log(bio.contacts.github);
+console.log(thereIsTwitter(bio.contacts.twitter));
+console.log(bio.contacts.location);
+bio.display();
 
 var education = {
   schools: [{name: "Al-Fahad high school"
@@ -43,6 +56,7 @@ var education = {
    ,degree: ["high school"]
    ,data:"1/5/2013"
    ,url:""
+ }
   ]
     ,onlineCourses:[
       { title: "Web Development Diploma"
@@ -54,7 +68,8 @@ var education = {
      ,display: function(){
 
      }
-  var work = {
+   }
+    var work = {
     jobs: [{employer: "KSU"
     ,title: "Web developer"
     ,location: "riyadh king khalid street"
@@ -71,7 +86,7 @@ var education = {
          ,description: "making robot with simple AI"
          ,images: ["http://via.placeholder.com/350x350","http://via.placeholder.com/200x150"]}
        ]
-   display: function(){
+   ,display: function(){
 
    }
 
