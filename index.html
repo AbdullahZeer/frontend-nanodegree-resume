@@ -14,6 +14,7 @@ The <head> of a website generally links to important resources the page will
 need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
+
 <html>
 <head>
   <!-- This tells the browser how to read the document. -->
@@ -23,7 +24,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <title>Resume</title>
 
   <!-- Load the page styles. -->
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
 
 
@@ -86,17 +87,24 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   the DOM. jQuery is fast and easy to use, but it doesn't do anything
   you can't accomplish with vanilla (regular) JavaScript.
   -->
+
+
   <script src="js/jQuery.js"></script>
 
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
-
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqekk7wOYa1m5C5rEG_Tqvo-ZJgPkngQo&callback=initMap">
+  </script>
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
   dynamically when this website, index.html, is opened.
   -->
   <script src="js/resumeBuilder.js"></script>
+
+
+
 
 
   <!--
