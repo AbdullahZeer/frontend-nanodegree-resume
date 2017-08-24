@@ -57,7 +57,7 @@ bio.display();
 
 var education = {
   schools: [{name: "King saud university"
-   ,location: "riyadh"
+   ,location: "Riyadh"
    ,degree: "BA"
    ,majors: ["CS"]
    ,dates:"1/5/2013"
@@ -116,7 +116,7 @@ var education = {
     var work = {
     jobs: [{employer: "KSU"
     ,title: "Web developer"
-    ,location: "riyadh"
+    ,location: "Riyadh"
     ,dates: "in progress"
     ,description: "making awsome websites :D" }]
     ,display: function(){
@@ -167,13 +167,10 @@ var education = {
 
   projectsObj.display();
 
+$("#mapDiv").append(googleMap);
+initializeMap();
 
-  var makeMap = function() {
-    $("#mapDiv").append(googleMap);
-    initializeMap();
-  }
 
-  makeMap();
 
   var topContacts = $("#topContacts").clone().children();
   $("#footerContacts").append(topContacts);

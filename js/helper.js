@@ -108,6 +108,7 @@ function initializeMap() {
 
   var mapOptions = {
     disableDefaultUI: true
+    ,zoom: 4
   };
 
   /*
@@ -177,8 +178,9 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
-      map.setZoom(8);
+      map.setZoom(10);
+      map.setCenter(bounds.getCenter());
+
     });
 
     // this is where the pin actually gets added to the map.
@@ -229,8 +231,8 @@ function initializeMap() {
   // locations is an array of location strings returned from locationFinder()
   locations = locationFinder();
 
-  // pinPoster(locations) creates pins on the map for each location in
-  // the locations array
+   pinPoster(locations)
+
   pinPoster(locations);
 
 }
@@ -239,12 +241,10 @@ function initializeMap() {
 Uncomment the code below when you're ready to implement a Google Map!
 */
 
-// Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+initializeMap();
+window.addEventListener('load', initializeMap);
 
-// Vanilla JS way to listen for resizing of the window
-// and adjust map bounds
-//window.addEventListener('resize', function(e) {
-  //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+window.addEventListener('resize', function(e) {
+
+ map.fitBounds(mapBounds);
+});
