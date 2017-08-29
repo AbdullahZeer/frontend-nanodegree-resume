@@ -11,7 +11,7 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .clear-fix {
@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #7EC0EE;
   line-height: 48px;
   display: inline;
 }
@@ -100,7 +100,7 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #7EC0EE;
   display: none;
 }
 
@@ -112,10 +112,20 @@ a {
   color: #f5ae23;
 }
 
+.sky{
+  background-color: #7EC0EE;
+}
+
+.sky-text{
+  color:#7EC0EE;
+}
+
 .white-text {
   font-weight: bold;
   color: #fff;
 }
+
+
 
 .gray {
   background-color: #f3f3f3;
