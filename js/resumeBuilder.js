@@ -10,9 +10,8 @@ var bio = {
         github: "https://github.com/AbdullahZeer",
         twitter: "@abdullahzeer27",
         location: "Riyadh"
-    }
+    },
 
-    ,
     welcomeMessage: "Hello World!!!",
     skills: ['java', 'sql', 'html', 'CSS', 'JavaScript', 'C'],
     biopic: "images/bio-img.jpg",
@@ -41,12 +40,12 @@ var bio = {
         });
 
     }
-}
+};
 
 function thereIsTwitter(string) {
 
     if (string === "")
-        return ""
+        return "";
     else {
         return HTMLtwitter.replace('%data%', bio.contacts.twitter);
     }
@@ -70,9 +69,8 @@ var education = {
             school: "shaw academy",
             dates: "9/25/2016",
             url: "http://www.shawacademy.com"
-        }]
+        }],
 
-        ,
     display: function() {
 
         education.schools.forEach(function(school) {
@@ -112,7 +110,7 @@ var education = {
             });
         }
     }
-}
+};
 
 education.display();
 
@@ -140,7 +138,7 @@ var work = {
             $(".work-entry").last().append(des);
         });
     }
-}
+};
 
 work.display();
 
@@ -169,7 +167,7 @@ var projectsObj = {
         });
     }
 
-}
+};
 
 projectsObj.display();
 

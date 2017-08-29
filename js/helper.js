@@ -110,8 +110,8 @@ function initializeMap() {
   var locations;
 
   var mapOptions = {
-    disableDefaultUI: true
-    ,zoom: 4
+    disableDefaultUI: true,
+    zoom: 4
   };
 
   /*
@@ -234,7 +234,7 @@ function initializeMap() {
   // locations is an array of location strings returned from locationFinder()
   locations = locationFinder();
 
-   pinPoster(locations)
+   pinPoster(locations);
 
   pinPoster(locations);
 
