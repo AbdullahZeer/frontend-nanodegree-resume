@@ -95,8 +95,9 @@ var education = {
        });
 
        if(education.onlineCourses.length > 0){
-          $(".education-entry").last().append(HTMLonlineClasses);
-
+          $("#education").append(HTMLonlineClasses);
+          $("#education").append(HTMLschoolStart);
+          
          education.onlineCourses.forEach(function(course){
          var cTitle = HTMLonlineTitle.replace("%data%" , course.title);
          var cSchool = HTMLonlineSchool.replace("%data%" , course.school);
