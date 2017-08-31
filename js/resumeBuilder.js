@@ -28,6 +28,9 @@ var bio = {
         var location = HTMLlocation.replace('%data%', bio.contacts.location);
         $("#topContacts").append(mobile, email, github, twitter, location);
 
+        var topContacts = $("#topContacts").clone().children();
+        $("#footerContacts").append(topContacts);
+
         var biopic = HTMLbioPic.replace('%data%', bio.biopic);
         $("#header").append(biopic);
         var welcome = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
@@ -142,7 +145,7 @@ var work = {
 
 work.display();
 
-var projectsObj = {
+var projects = {
     projects: [{
         title: "AI Project",
         dates: "3/25/2017",
@@ -151,7 +154,7 @@ var projectsObj = {
     }],
     display: function() {
 
-        projectsObj.projects.forEach(function(project) {
+        projects.projects.forEach(function(project) {
             $("#projects").append(HTMLprojectStart);
             var pTitle = HTMLprojectTitle.replace("%data%", project.title);
             $(".project-entry").last().append(pTitle);
@@ -169,12 +172,7 @@ var projectsObj = {
 
 };
 
-projectsObj.display();
+projects.display();
 
 $("#mapDiv").append(googleMap);
 initializeMap();
-
-
-
-var topContacts = $("#topContacts").clone().children();
-$("#footerContacts").append(topContacts);
